@@ -53,7 +53,8 @@ nav .menu{
   color: black;
 }
 .img{
-  background: url('/static/0.06974800_1654779705_istock-503646746.jpg')no-repeat;
+  background: url('istockphoto-1264890031-612x612.jpg')no-repeat;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   background-size: cover;

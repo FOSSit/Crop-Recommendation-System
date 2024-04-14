@@ -59,6 +59,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    background-repeat: no-repeat;
   }
   .img::before{
     content: '';
