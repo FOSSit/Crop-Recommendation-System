@@ -1,11 +1,24 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background: url(/static/image.jpg);
-    background-size: cover;
-    background-position: center;
     font-family: sans-serif;
+    
+    /* Background image */
+    background-image: url(/static/image.jpg);
+    
+    /* Set the background to cover the entire viewport */
+    background-size: cover;
+    
+    /* Center the image */
+    background-position: center;
+    
+    /* Prevent the image from tiling */
+    background-repeat: no-repeat;
+    
+    /* Optional: Set background attachment to fixed */
+    background-attachment: fixed; /* Keeps the image in place as the user scrolls */
 }
+
 .login-box{
     width: 320px;
     height: 420px;
