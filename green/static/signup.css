@@ -17,6 +17,7 @@ body{
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
+    overflow:auto;
 }
 .avatar{
     width: 100px;
@@ -50,6 +51,7 @@ h1{
     height: 40px;
     color: #fff;
     font-size: 16px;
+    width:100px;
 }
 .login-box input[type="submit"]
 {
