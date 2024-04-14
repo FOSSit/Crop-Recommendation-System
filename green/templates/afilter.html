@@ -7,6 +7,24 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'Advancefilter.css'%}">
+    <script>
+
+      function toggleLinks(loggedIn) {
+          var loginLink = document.getElementById('loginLink');
+          var signupLink = document.getElementById('signupLink');
+          var logoutLink = document.getElementById('logoutLink');
+
+          if (loggedIn) {
+              loginLink.style.display = 'none';
+              signupLink.style.display = 'none';
+              logoutLink.style.display = 'inline-block';
+          } else {
+              loginLink.style.display = 'inline-block';
+              signupLink.style.display = 'inline-block';
+              logoutLink.style.display = 'none';
+          }
+      }
+  </script>
 
 </head>
 <body>
@@ -19,8 +37,10 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="file:///C:/Users/deepe/OneDrive/Desktop/Crop%20production/Login%20Page/login.html">Login</a></li>
-            <li><a href="file:///C:/Users/deepe/OneDrive/Desktop/Crop%20production/Login%20Page/signup.html">Signup</a></li>
+            <li id="loginLink"><a href="file:///C:/Users/deepe/OneDrive/Desktop/Crop%20production/Login%20Page/login.html">Login</a></li>
+            <li id="signupLink"><a href="file:///C:/Users/deepe/OneDrive/Desktop/Crop%20production/Login%20Page/signup.html">Signup</a></li>
+            <li id="logoutLink" style="display: none;"><a href="#">Logout</a></li>
+
           </ul>
         </div>
       </nav>
@@ -83,6 +103,12 @@
         </div>
       </div>
     </form>
+    <script>
+
+
+      var loggedIn = false; 
+      toggleLinks(loggedIn); 
+  </script>
     
     
     
