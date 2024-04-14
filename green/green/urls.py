@@ -23,6 +23,5 @@ admin.site.index_title = "Welcome to Crops Predictor"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
     path('', include('home.urls'))
 ]
