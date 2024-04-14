@@ -42,3 +42,7 @@ def afilter(request):
 
 def result(request):
     return render(request,'result.html')
+def contact(request):
+    return render(request,'contact.html')
+def about(request):
+    return render(request,'about.html')

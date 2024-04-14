@@ -9,5 +9,7 @@ urlpatterns = [
     path("user",views.user,name="user"),
     path("afilter",views.afilter,name="afilter"),
     path("result",views.result,name="result"),
+    path("contact",views.contact,name="contact"),
+    path("about",views.about,name="about"),
 
 ]

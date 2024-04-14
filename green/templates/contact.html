@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title> Transparent Login Form Design </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">
+       
+</head>
+
+<body>
+    <style>
+        .contact-box {
+            width: 400px;
+            margin: 0 auto; /* This centers the contact box horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /* background-color: #f9f9f9; */
+        }
+
+        .contact-box h1 {
+            text-align: center; /* Center the heading */
+        }
+
+        .contact-box form {
+            text-align: center; /* Center the form elements */
+        }
+
+        .contact-box form input[type="text"],
+        .contact-box form input[type="email"],
+        .contact-box form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-box form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contact-box form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <div class="contact-box">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or inquiries, please feel free to contact us at <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>.</p>
+        <form method="post">
+            {% csrf_token %}
+            <p>Name</p>
+            <input type="text" name="name" placeholder="Enter Your Name">
+            <p>Email</p>
+            <input type="email" name="email" placeholder="Enter Your Email">
+            <p>Message</p>
+            <textarea name="message" placeholder="Enter Your Message"></textarea>
+            <input type="submit" name="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
+
+
