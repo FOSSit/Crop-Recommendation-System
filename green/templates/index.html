@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Website Layout</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'Homepage.css'%}">
-   </head>
-<body>
-  <nav>
-    <div class="menu">
-      <div class="logo">
-        <a href="#">CropRecommendation <span class="highlight">System</span></a>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Layout</title>
+    <link
+      rel="stylesheet"
+      href="/Crop-Recommendation-System/green/static/Homepage.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a href="/Crop-Recommendation-System/green/templates/afilter.html"
+            >CropRecommendation <span class="highlight">System</span></a
+          >
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="/Crop-Recommendation-System/green/templates/about.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="/Crop-Recommendation-System/green/templates/contact.html"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="/Crop-Recommendation-System/green/templates/login.html"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a href="/Crop-Recommendation-System/green/templates/signup.html"
+              >Signup</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Signup</a></li>
-      </ul>
+    </nav>
+    <div class="img"></div>
+    <div class="center">
+      <div class="title">Rainforest Model</div>
+      <br />
+      <div class="sub_title">Predict Crop Recommendation system data</div>
+      <div class="btns"></div>
     </div>
-  </nav>
-  <div class="img"></div>
-  <div class="center">
-    <div class="title">Rainforest Model</div><br>
-    <div class="sub_title">Predict Crop Recommendation system data</div>
-    <div class="btns">
-      
-    </div>
-  </div>
-</body>
+  </body>
 </html>
