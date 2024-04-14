@@ -2,6 +2,34 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from home.models import ContactEntry
+from django import forms
+
+class ContactForm(forms.Form):
+    name = forms.CharField(label='Your Name', max_length=100)
+    email = forms.EmailField(label='Your Email')
+    message = forms.CharField(label='Your Message', widget=forms.Textarea)
+
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):   
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+                       # Process the form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            # Process the form data (send email, save to database, etc.)
+            # For now, let's just print the form data
+            print(form.cleaned_data)
+            entry = ContactEntry(name=name, email=email, message=message)
+            entry.save()
+            # Redirect to a success page or any other page after successful submission
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
 
 # Create your views here.
 def index(request):
