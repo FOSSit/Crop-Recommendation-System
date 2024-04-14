@@ -58,7 +58,7 @@ nav .menu{
   height: 100vh;
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: absolute;
 }
 .img::before{
   content: '';
