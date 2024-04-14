@@ -1,25 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> Transparent Login Form Design </title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 </head>
-    <body>
-    <div class="login-box">
-    <img src="/static/avatar.png" class="avatar">
-        <h1>Login Here</h1>
-            <form method="post">
-            {%csrf_token%}
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
-            <input type="submit" name="submit" value="Login">
-            <a href="#">Forget Password</a>    
-            </form>
-        
-        
-        </div>
-    
-    </body>
+<body>
+    <h2>Login</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+        <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+</body>
 </html>
