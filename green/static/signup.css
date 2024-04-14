@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background: url(/static/image.jpg);
@@ -6,19 +6,22 @@ body{
     background-position: center;
     font-family: sans-serif;
 }
-.login-box{
+
+.login-box {
     width: 320px;
-    height: 420px;
+    max-height: 420px; /* Adjusted max-height */
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     top: 50%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 50px 30px; /* Adjusted padding */
+    overflow: auto; /* Added overflow property */
 }
-.avatar{
+
+.avatar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -26,23 +29,28 @@ body{
     top: -50px;
     left: calc(50% - 50px);
 }
-h1{
+
+h1 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
 }
-.login-box p{
+
+.login-box p {
     margin: 0;
     padding: 0;
     font-weight: bold;
 }
-.login-box input{
+
+.login-box input {
     width: 100%;
     margin-bottom: 20px;
 }
-.login-box input[type="text"], input[type="password"], input[type="email"]
-{
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box input[type="email"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -51,8 +59,8 @@ h1{
     color: #fff;
     font-size: 16px;
 }
-.login-box input[type="submit"]
-{
+
+.login-box input[type="submit"] {
     border: none;
     outline: none;
     height: 40px;
@@ -61,19 +69,19 @@ h1{
     font-size: 18px;
     border-radius: 20px;
 }
-.login-box input[type="submit"]:hover
-{
+
+.login-box input[type="submit"]:hover {
     cursor: pointer;
     background: #39dc79;
     color: #000;
 }
 
-.login-box a{
+.login-box a {
     text-decoration: none;
     font-size: 14px;
     color: #fff;
 }
-.login-box a:hover
-{
+
+.login-box a:hover {
     color: #39dc79;
 }
