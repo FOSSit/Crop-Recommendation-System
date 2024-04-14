@@ -1,6 +1,8 @@
 # crop-prediction
 
-The aim of the app is to create a crop prediction model & website,the website starts with a home page where people can login/signup,this is followed by the input of city and state of the user to make the model more accurate.An even more accurate filter could be inputter with the help of advanced filter an
+The aim of the app is to create a crop prediction model & website,the website starts with a home page where people can login/signup,this is followed by the input of city and state of the user to make the model more accurate.An even more accurate filter could be inputter with the help of advanced filter to upload a value for various minerals.
+
+This finally provides an accrate result with the best crop to grow 
 
 Pages:
 1)Home
@@ -9,7 +11,10 @@ Pages:
 4)Login
 5)Signup
 
-Installation Guide
+
+
+
+
 
 
 
